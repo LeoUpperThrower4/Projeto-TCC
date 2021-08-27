@@ -18,7 +18,7 @@ while True:
         point = np.array([float(x), float(y), float(z)])
         points.append(point)
     except:
-        print('erro')
+        print(currentLine)
 
 
 serialCom.close()
