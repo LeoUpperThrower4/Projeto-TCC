@@ -232,7 +232,9 @@ void loop() {
 
   // Quando o botão for pressionado...
   if (not digitalRead(MAIN_BUTTON)) {
+    // Escanear o objeto
     scan();
+    // Reiniciar as configurações e altura do sensor 
     resetScan();
   }
 }
