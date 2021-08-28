@@ -3,6 +3,7 @@
 
 // Botão principal
 #define MAIN_BUTTON A0
+#define CONFIG_BUTTON A1
 
 // Intervalo de tempo entre as fases em milisegundos - min 2 para Wave Step 
 int phase_delay = 2 ;
@@ -15,6 +16,9 @@ int baseSteps = 0;
 
 // Criando instância global do Sensor VL53L0X
 VL53L0X sensor;
+
+// Variável que controla se o sensor está configurado (roda na primeira vez que liga o Arduino)
+bool isConfigured = false;
 
 class Point {
   public:
@@ -62,6 +66,7 @@ Point measure3DPoint() {
 }
 
 // Realiza um passo FullStep no motor do sensor
+// cw -> 0 - Anticlockwise; qualquer outro - Clockwise // TO-DO: mudar para bool ao inves de int
 void FullStepSensor(int cw) {
   // Matriz dos bytes das fases do motor da base. PORTB - portas digitais 8 à 13
   byte HOR[4] = {B00011000, B00110000, B00100100, B00001100};    // Sentido Horário FullStep
@@ -119,6 +124,8 @@ void setup() {
   
   // Definição botão start/stop
   pinMode(MAIN_BUTTON, INPUT_PULLUP);
+  
+  pinMode(CONFIG_BUTTON, INPUT_PULLUP);
 
   // TO-DO: fazer isso de maneira eficiente
   // Definições de pinos diretamente
@@ -158,7 +165,6 @@ void moveSensorInCM(int distance_in_cm = 1, bool up = true) {
 // Move o sensor para o ponto inicial e reinicia todas variáveis necessárias para o scan.
 void resetScan() {
   baseSteps = 0;
-  
 }
 
 void scan () {
@@ -180,14 +186,34 @@ void scan () {
   };
 }
 
+void configureSensor() {
+  while(true) {
+    if (not digitalRead(MAIN_BUTTON) and (not digitalRead(CONFIG_BUTTON))) {
+      Serial.println("configurado");
+      break;
+    } else if (not digitalRead(MAIN_BUTTON) and (digitalRead(CONFIG_BUTTON))) {
+      Serial.println("Subindo");
+      FullStepSensor(1);
+    } else if (digitalRead(MAIN_BUTTON) and (not digitalRead(CONFIG_BUTTON))) {
+      FullStepSensor(0);
+      Serial.println("Descendo");
+    }
+  }
+
+  isConfigured = true;
+}
 
 void loop() {
+  if (not isConfigured) {
+    configureSensor();
+  }
   // Quando o botão for pressionado...
   if (not digitalRead(MAIN_BUTTON)) {
     Serial.println("iniciou");
-    moveSensorInCM();
-    Point ponto = measure3DPoint();
-    Serial.println(ponto.z);
+      moveSensorInCM(1,false);
+    // FullRotationBase(1);
+    // Point ponto = measure3DPoint();
+    // Serial.println(ponto.z);
     Serial.println("done");
   }
 }
