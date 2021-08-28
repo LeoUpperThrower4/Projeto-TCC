@@ -2,3 +2,4 @@
 [X] task-001: permitir configuração manual da altura do sensor quando inicia o Arduino pela primeira vez
 [] task-002: fazer com que a função scan() funcione adequadamente
 [] task-003: reafatorar
+[] task-004: criar readme
