@@ -36,9 +36,10 @@ $ cd Projeto-TCC
 
 Para usar o projeto, siga estes passos:
 
-- Abra o arquivo sensor_VL53L.ino na IDE do Arduino
+- Abra o arquivo ```sensor_VL53L.ino``` na IDE do Arduino
 - Envie-o para o microcontrolador
 - Através dos dois botões, ajuste o ponto inicial do sensor
+- Abra e inicie o arquivo ```leitor.py```
 - Clique no botão principal para iniciar o processo de modelagem
 
 ## 📫 Contribuindo para o projeto
