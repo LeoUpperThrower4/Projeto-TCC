@@ -3,7 +3,7 @@ import serial
 import numpy as np
 import pyvista as pv
 
-serialCom = serial.Serial('COM3', 9600)
+serialCom = serial.Serial('COM4', 9600)
 serialCom.timeout = 1
 
 points = []
@@ -20,11 +20,16 @@ while True:
     except:
         print(currentLine)
 
-
 serialCom.close()
 
 points = np.array(points)
 point_cloud = pv.PolyData(points)
-# mesh = pv.lines_from_points(points)
-# pv.save_meshio("mesh.obj", mesh)
 point_cloud.plot()
+
+point_cloud.save("out/point_cloud.vtk")
+
+volume = point_cloud.delaunay_3d()
+shell = volume.extract_geometry()
+shell.plot()
+
+shell.save('out/mesh.stl')
