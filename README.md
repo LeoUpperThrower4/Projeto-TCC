@@ -77,8 +77,8 @@ Como alternativa, consulte a documentação do GitHub em [como criar uma solicit
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Pedro Scheunemann"/><br>
+      <a href="https://github.com/PedroScheunemann">
+        <img src="https://avatars.githubusercontent.com/u/88161489?v=4" width="100px;" alt="Foto do Pedro Scheunemann"/><br>
         <sub>
           <b>Pedro Scheunemann</b>
         </sub>
