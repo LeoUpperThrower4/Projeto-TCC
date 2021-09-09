@@ -1,4 +1,4 @@
-# Nome do projeto
+# Escâner Tridimensional de Pequenos Objetos
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
@@ -8,13 +8,13 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/LeoUpperThrower4/Projeto-TCC?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/LeoUpperThrower4/Projeto-TCC?style=for-the-badge)
 
-<img src="assets/imgs/cover.png" alt="Projeto Construído">
+<img src="completo.jpeg" alt="Projeto Construído">
 
 > Escrever uma pequena descrição.
 
-## 🔖 Esquemático
+## 🔖 Artigo
 
-O projeto segue o esquemático a seguir:
+No [artigo](Artigo.pdf) é possível encontrar todo projeto escrito detalhadamente com fotos dos resultados e testes.
 
 ## 🚀 Instalando o projeto
 
