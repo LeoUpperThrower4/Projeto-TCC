@@ -14,7 +14,7 @@
 
 ## 🔖 Artigo
 
-No [artigo](Artigo.pdf) é possível encontrar todo projeto escrito detalhadamente com fotos dos resultados e testes.
+No [artigo](Artigo_TCC.pdf) é possível encontrar todo projeto escrito detalhadamente com fotos dos resultados e testes.
 
 ## 🚀 Instalando o projeto
 
