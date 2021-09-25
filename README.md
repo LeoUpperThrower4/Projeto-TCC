@@ -10,8 +10,6 @@
 
 <img src="protótipo.jpeg" alt="Protótipo do projeto construído">
 
-> Escrever uma pequena descrição.
-
 ## 🔖 Artigo
 
 No [artigo](Artigo_TCC.pdf) é possível encontrar todo projeto escrito detalhadamente com fotos dos resultados e testes.
