@@ -8,7 +8,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/LeoUpperThrower4/Projeto-TCC?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/LeoUpperThrower4/Projeto-TCC?style=for-the-badge)
 
-<img src="completo.jpeg" alt="Projeto Construído">
+<img src="protótipo.jpeg" alt="Protótipo do projeto construído">
 
 > Escrever uma pequena descrição.
 
